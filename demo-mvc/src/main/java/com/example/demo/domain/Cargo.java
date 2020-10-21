@@ -11,7 +11,7 @@ import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@Table (name ="CARGOS")
+@Table (name ="cargos")
 public class Cargo extends AbstractEntity<Long>{
 	
 	@Column(name = "nome", nullable = false, unique = true, length = 60)

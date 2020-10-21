@@ -8,7 +8,7 @@ import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name ="ENDERECOS")
+@Table(name ="enderecos")
 public abstract class Endereco extends AbstractEntity<Long> {
 	
 	@Column(nullable = false)

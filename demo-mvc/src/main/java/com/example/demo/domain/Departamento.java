@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name ="DEPARTAMENTOS")
+@Table(name ="departamentos")
 public class Departamento extends AbstractEntity<Long>{
 	
 	@Column(name = "nome", nullable = false, unique = true, length = 60)

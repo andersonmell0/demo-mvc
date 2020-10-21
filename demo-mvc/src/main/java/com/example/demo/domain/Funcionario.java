@@ -13,7 +13,7 @@ import javax.persistence.Table;
 
 @SuppressWarnings("serial")
 @Entity
-@Table(name = "FUNCIONARIOS")
+@Table(name = "funcionarios")
 public class Funcionario extends AbstractEntity<Long>{
 
 	@Column(name = "nome", nullable = false, unique = true)
