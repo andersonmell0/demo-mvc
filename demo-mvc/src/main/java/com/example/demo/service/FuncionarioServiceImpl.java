@@ -9,22 +9,25 @@ import org.springframework.transaction.annotation.Transactional;
 import com.example.demo.dao.FuncionarioDao;
 import com.example.demo.domain.Funcionario;
 
-@Service @Transactional(readOnly = false)
+@Service @Transactional(readOnly = true)
 public class FuncionarioServiceImpl implements FuncionarioService{
 	
 	@Autowired
 	private FuncionarioDao dao;
 	
+	@Transactional(readOnly = false)
 	@Override
 	public void salvar(Funcionario funcionario) {
 		dao.save(funcionario);
 	}
-
+	
+	@Transactional(readOnly = false)
 	@Override
 	public void editar(Funcionario funcionario) {
 		dao.update(funcionario);
 	}
-
+	
+	@Transactional(readOnly = false)
 	@Override
 	public void excluir(Long id) {
 		dao.delete(id);
@@ -38,6 +41,16 @@ public class FuncionarioServiceImpl implements FuncionarioService{
 	@Override @Transactional(readOnly=true)
 	public List<Funcionario> buscarTodos() {
 		return dao.findAll();
+	}
+
+	@Override
+	public List<Funcionario> buscarPorNome(String nome) {
+		return dao.findByNome(nome);
+	}
+
+	@Override
+	public List<Funcionario> buscarPorCargo(Long id) {
+		return dao.findByCargo(id);
 	}
 
 }
