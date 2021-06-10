@@ -27,12 +27,14 @@
 			<span th:text="${status}"></span>
 		</h1>
 	
-		<h2 th:text="${error}"></h2>
-	
+		<h2 th:text="${error}"></h2>		
+		
 		<div>
-			<span th:text="${message}"></span><br/><br/>
+			<span th:text="${message}"></span><br/>
+			<span th:text="${timestamp}"></span><br/><br/>
 			<a class="btn btn-primary" type="button" href="javascript:history.back()">Voltar à página anterior</a>
 		</div>
+		
 	</div>
 	
 </body>
