@@ -1,4 +1,4 @@
-package com.example.demo.controller;
+package com.example.demo.web.controller;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -25,7 +25,7 @@ import com.example.demo.domain.Funcionario;
 import com.example.demo.domain.UF;
 import com.example.demo.service.CargoService;
 import com.example.demo.service.FuncionarioService;
-import com.example.demo.validator.FuncionarioValidator;
+import com.example.demo.web.validator.FuncionarioValidator;
 
 @Controller
 @RequestMapping("/funcionarios")

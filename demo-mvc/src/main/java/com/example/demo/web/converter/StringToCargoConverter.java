@@ -1,4 +1,4 @@
-package com.example.demo.converter;
+package com.example.demo.web.converter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
