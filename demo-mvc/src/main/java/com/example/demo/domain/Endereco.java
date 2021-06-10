@@ -42,7 +42,7 @@ public class Endereco extends AbstractEntity<Long> {
 	@NotNull(message="{NotNull.endereco.numero}")
 	@Digits(integer=5, fraction=0)
 	@Column(nullable = false, length = 5)
-	private String numero;
+	private Integer numero;
 	
 	@Size(max=255)	
 	private String complemento;
@@ -79,11 +79,11 @@ public class Endereco extends AbstractEntity<Long> {
 		this.uf = uf;
 	}
 
-	public String getNumero() {
+	public Integer getNumero() {
 		return numero;
 	}
 
-	public void setNumero(String numero) {
+	public void setNumero(Integer numero) {
 		this.numero = numero;
 	}
 
